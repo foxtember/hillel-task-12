@@ -5,6 +5,10 @@ $main-color: #E3D5B8;
 $text-color: #161616;
 $font-family: Arial, sans-serif;
 
+html{
+    font-family: $font-family;
+}
+
 .content-width{
     width: 1000px;
 }
@@ -25,15 +29,51 @@ $font-family: Arial, sans-serif;
     text-decoration: none;
 }
 
-html{
-    font-family: $font-family;
+.checkbox-label{
+    display: block;
+
+    text-align: left;
+
+    input[type=checkbox]{
+        display: none;
+    }
+
+    &-text{
+        font-size: 20px;
+        color: white;
+
+        vertical-align: top;
+
+        &::before{
+            content: '';
+
+            box-sizing: border-box;
+            display: inline-block;
+
+            width: 18px;
+            height: 18px;
+
+            background-color: white;
+
+            margin-right: 22px;
+
+            border-radius: 5px;
+        }
+
+        input[type=checkbox]:checked + &::before{
+            background-image: url("../images/checked-icon.svg");
+            background-size: 14px, 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
 }
 
 .main-header{
     display: flex;
     align-items: center;
 
-    padding: 30px 0;
+    padding: 30px 0 0 0;
 
     &-wrapper{
         background-color: $main-color;
@@ -74,96 +114,84 @@ html{
     }
 }
 
-.section{
-    &-content{
+.travel-is-beautiful{
+    &-wrapper{
         background-color: $main-color;
+        font-size: 0;
+        text-align: center;
+    }
+
+    &-content{
+        padding: 126px 0 0 0;
+    }
+
+    display: inline-block;
+    vertical-align: top;
+
+    letter-spacing: -1px;
+    max-width: 480px;
+    text-align: left;
+
+    &-title{
+        font-size: 90px;
+        text-transform: uppercase;
+
+        margin-bottom: 30px;
     }
     
-    &-container{
-        position: relative;
-        display: flex;
-        padding: 160px 0;
+    &-description{                
+        font-size: 20px;
+        line-height: 28px;
+    }
 
-        &-description{
-            
-            &-title{
-                max-width: 480px;
-                font-size: 90px;
-                text-transform: uppercase;
-                letter-spacing: -1px;
+    &-form{
+        box-sizing: border-box;
+        display: inline-block;
 
-                margin-bottom: 30px;
+        margin-left: 80px;
 
-                span{
-                    color: $accent-color;
-                }
-            }
+        width: 400px;
+        background-color: $accent-color;
+        text-align: center;
+        padding: 28px 24px;
+        border-radius: 5px;
 
-            &-text{
-                max-width: 460px;
-                
-                font-size: 20px;
-                line-height: 28px;
-                letter-spacing: -1px;
-            }
-        }
-
-        &-form{
-            position: absolute;
-            right: 0;
-            bottom: -80px;
-            max-width: 400px;
-            background-color: $accent-color;
-            text-align: center;
-            padding: 28px 24px;
-            border-radius: 5px;
-
-            input{
-                display: block;
-                margin: 0 auto;
-                width: 353px;
-
-                padding: 15px 0 15px 18px;
-                font-size: 20px;
-
-                margin-bottom: 17px;
-                border-radius: 5px;
-                border: none;
-
-                &::placeholder{
-                    color: #B5B5B5;
-                }
-
-            }
-        }
-
-        .form-title{
+        &-title{
             color: white;
             font-size: 22px;
             text-transform: uppercase;
             margin-bottom: 36px;
         }
 
-        .form-checkbox-accept{
-            display: inline-block;
-            margin-bottom: 22px;
-            float: left;
+        input{
+            &[type=text], &[type=email]{
+                box-sizing: border-box;
 
-            input{
-                width: 19px;
-                height: 18px;
-                display: inline;
-            }
-
-            span{
-                color: white;
+                display: block;
+                margin: 0 auto;
+                width: 350px;
+    
+                padding: 15px 0 15px 18px;
                 font-size: 20px;
-                margin-left: 22px;
+    
+                margin-bottom: 17px;
+                border-radius: 5px;
+                border: none;
+    
+                &::placeholder{
+                    color: #B5B5B5;
+                }
             }
         }
 
-        .form-submit{
+        &-accept{
+            margin-top: 23px;
+        }
+
+        &-button{
             width: 100%;
+
+            margin-top: 21px;
 
             font-size: 22px;
             text-transform: uppercase;
