@@ -242,108 +242,126 @@ html{
     }
 }
 
-.our{
-    &-story{
+.our-story{
+    &-wrapper{
         background-color: $accent-color;
-
-        &-description{
-            max-width: 607px;
-            font-size: 20px;
-            color: white;
-            line-height: 28px;
-        }
-
-        &-link{
-            text-decoration: none;
-            text-transform: uppercase;
-            color: $text-color;
-            font-size: 22px;
-
-            text-align: center;
-            border-radius: 5px;
-
-            background-color: $main-color;
-            padding: 20px 0;
-            width: 269px;
-        }
     }
 
-    &-story-containers{
-        padding: 30px 105px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+    padding: 30px 0;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+
+    &-description{
+        max-width: 607px;
+        font-size: 20px;
+        color: white;
+        line-height: 28px;
+    }
+
+    &-link{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $text-color;
+        font-size: 22px;
+
+        text-align: center;
+        border-radius: 5px;
+
+        background-color: $main-color;
+        padding: 20px 71px;
     }
 }
 
 .pricing{
-    &-content{
+    &-wrapper{
         background-color: $main-color;
     }
 
-    &-containers{
+    padding: 50px 0;
+
+    &-title{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 50px;
+        color: $text-color;
+    }
+
+    &-plans-list{
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
+
         padding: 50px 0;
         text-align: center;
-    }
 
-    &-container{
-        background-color: white;
-        max-width: 318px;
-        padding: 30px 60px 13px 60px;
-        border-radius: 5px;
+        &-item{
+            box-sizing: border-box;
 
-        &-span{
-            font-size: 22px;
-            color: $text-color;
-            margin-bottom: 22px;
-        }
-
-        &-title{
-            color: $accent-color;
-            font-size: 60px;
-            text-transform: uppercase;
-            margin-bottom: 17px;
-        }
-
-        &-description{
-            font-size: 20px;
-            color: $text-color;
-            line-height: 28px;
-
-            margin-bottom: 30px;
-        }
-
-        &-link{
-            color: $text-color;
-            font-size: 22px;
-            text-transform: uppercase;
-            text-decoration: none;
+            background-color: white;
+            width: 318px;
+            padding: 30px 60px;
             border-radius: 5px;
 
-            background-color: $main-color;
+            position: relative;
+            overflow: hidden;
 
-            display: block;
-            width: 205px;
-            padding: 12px 0;
-        }
+            &-name{
+                font-size: 22px;
+                color: $text-color;
+                margin-bottom: 22px;
+            }
 
-        .accent-color{
-            background-color: $accent-color;
-            color: white;
+            &-price{
+                color: $accent-color;
+                font-size: 60px;
+                text-transform: uppercase;
+                margin-bottom: 17px;
+            }
+
+            &-description{
+                font-size: 20px;
+                color: $text-color;
+                line-height: 28px;
+
+                margin-bottom: 30px;
+            }
+
+            &-link{
+                color: $text-color;
+                font-size: 22px;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-radius: 5px;
+    
+                background-color: $main-color;
+    
+                display: block;
+                width: 205px;
+                padding: 12px 0;
+
+                &.popular{
+                    color: white;
+                    background-color: $accent-color;
+                }
+            }
+
+            &-popular-banner{
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                background-color: #B4A993;
+                padding: 40px 60px 20px 60px;
+
+                font-size: 16px;
+                text-align: center;
+                color: $text-color;
+                
+                transform: rotate(-45deg) translateX(-20%) translateY(-65%);
+            }
         }
     }
-}
-
-.pricing-title{
-    text-align: center;
-    background-color: $main-color;
-    padding-top: 53px;
-    text-transform: uppercase;
-    font-size: 50px;
-    color: $text-color;
 }
 
 .testimonial-and-gallery-containers{
