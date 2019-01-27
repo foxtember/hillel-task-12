@@ -472,25 +472,24 @@ html{
         }
     }
 }
-
-.footer{
-    &-content{
+.travel-footer{    
+    &-wrapper{
         background-color: $text-color;
     }
-
-    &-container{
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        padding: 60px 0 51px 0;
-    }
-
-    &-description{
-        align-self: center;
+    
+    
+    padding: 60px 0 51px 0;
+    color: white;
+    
+    &-designed{
+        float: left;
+        line-height: 65px;
+        margin-right: auto;
     }
 
     &-logo{
-        font-size: 65px;
+        float: right;
         color: $accent-color;
+        font-size: 65px;
     }
 }
