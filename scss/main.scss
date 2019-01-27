@@ -364,77 +364,111 @@ html{
     }
 }
 
-.testimonial-and-gallery-containers{
-    display: flex;
-    justify-content: space-between;
-    
-    padding: 130px 0 120px 0;
-    text-align: center;
+%circle-icon-with-shadow {
+    border-radius: 100%;
+    box-shadow: 0 -5px 16px rgba(#B8AC93, $alpha: 0.75);
 }
 
-.testimonial{
-    &-container{
-        font-size: 20px;
-        text-align: center;
-        margin-bottom: 63px;
-        line-height: 28px;
-        padding: 21px 75px 28px 26px;
-        
-
-
-        .woman{
-            background-color: $main-color;
-            border-radius: 5px;
-            text-align: left;
-        }
-        
-        .man{
-            text-align: left;
-            
-        }
+.achievements{
+    &-wrapper{
+        background-color: white;
     }
 
-    &-description{
-        margin-bottom: 20px;
-    }
-
-    &-span{
-        color: $accent-color;
-        margin-bottom: 30px;
-    }
+    padding: 138px 0 120px 0;
 
     &-title{
         font-size: 50px;
+        text-align: center;
         text-transform: uppercase;
+        color: $text-color;
+
         margin-bottom: 50px;
     }
-}
 
-.gallery{
-    &-container{
-        
-    }
+    &-testimonial{
+        float: left;
 
-    &-title{
-        font-size: 50px;
-        color: $accent-color;
-        text-transform: uppercase;
-        margin-bottom: 60px;
-    }
+        &-story{
+            padding: 22px 75px 28px 26px;
 
-    &-icons{
-        img{
-            width: 104px;
-            height: 104px;
+            position: relative;            
+            margin-bottom: 35px;
+
+            &:first-of-type{
+                padding-top: 0;
+            }
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+
+            &.accent{
+                background-color: $main-color;
+                border-radius: 5px;
+            }
+
+            &-text, &-author{
+                max-width: 340px;
+                line-height: 28px;
+                font-size: 20px;
+            }
+
+            &-author{
+                display: block;
+                margin-top: 20px;
+            }
+
+            &-photo{
+                @extend %circle-icon-with-shadow;
+
+                position: absolute;
+
+                width: 104px;
+                height: 104px;
+
+                top: 50%;
+                right: 0;
+
+                transform: translateY(-50%) translateX(50%);
+            }
         }
     }
 
-    &-subtitle{
-        margin-top: 42px;
-    
-        a{
+    &-gallery{
+        float: right;
+
+        & .accent-color{
+            @extend .accent-color;
+        }
+
+        &-icons{
+            display: grid;
+            grid-template-columns: repeat(3, 104px);
+            column-gap: 34px;
+            row-gap: 30px;
+
+            img{
+                @extend %circle-icon-with-shadow;
+
+                border-radius: 100%;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &-link{
+            display: block;
+
+            margin-top: 42px;
+
+            text-align: center;
             font-size: 20px;
+            text-transform: uppercase;
             color: $accent-color;
+
+            &:visited{
+                color: $accent-color;
+            }
         }
     }
 }
